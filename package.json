@@ -2,10 +2,9 @@
   "name": "invaders",
   "version": "0.0.1",
   "description": "Space Invaders Clone in JS",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "bundle": "webpack index.js invaders.js"
+    "start": "webpack index.js invaders.js && electron ."
   },
   "repository": {
     "type": "git",

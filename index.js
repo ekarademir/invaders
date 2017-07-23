@@ -8,7 +8,10 @@ let sketch = function (p5) {
     }
 
     p5.draw = () => {
-        p5.background(255,10)
+        p5.background(255)
+        p5.ellipse(50, 50, 80, 80)
     }
 
 }
+
+new p5(sketch)
