@@ -4,7 +4,8 @@
   "description": "Space Invaders Clone in JS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "bundle": "webpack index.js invaders.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ekarademir/invaders/issues"
   },
-  "homepage": "https://github.com/ekarademir/invaders#readme"
+  "homepage": "https://github.com/ekarademir/invaders#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "p5": "^0.5.11",
+    "webpack": "^3.3.0"
+  }
 }
