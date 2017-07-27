@@ -40,3 +40,7 @@ app.on('activate', () => {
         createWindow()
     }
 })
+
+ipcMain.on('convey', (event, _msg) => {
+    console.log(_msg)
+})

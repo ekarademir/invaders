@@ -1,6 +1,13 @@
 const p5 = require('p5')
 
+const {ipcRenderer} = require(electron)
 
+/**
+ * @param _msg {string}
+ */
+let convey = (_msg) => {
+    ipcRenderer.send('convey', _msg)
+}
 
 
 const bw = 40
@@ -15,6 +22,8 @@ let sketch = function (p5) {
         canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
 
         p = Math.min(p5.windowWidth/bw, p5.windowHeight/bh)
+
+        convey(p)
 
         p5.smooth()
     }
