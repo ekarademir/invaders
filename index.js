@@ -10,9 +10,9 @@ let canvas
 let sketch = function (p5) {
 
     p5.setup = () => {
-        canvas = p5.createCanvas(p5.displayWidth, p5.displayHeight)
+        canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
 
-        p = Math.min( [p5.displayWidth/boardWidth, p5.displayHeight/boardHeight] )
+        p = Math.min( [p5.windowWidth/bw, p5.windowHeight/bh] )
 
         p5.smooth()
     }
@@ -20,7 +20,9 @@ let sketch = function (p5) {
     p5.draw = () => {
         p5.background(0)
         
-        p5.rectangle(1*p, 1*p, (bw-2)*p, (bh-2)*p )
+        p5.noFill()
+        p5.stroke(255)
+        p5.rectangle( 1*p, 1*p, (bw-2)*p, (bh-2)*p )
     }
 
 }
