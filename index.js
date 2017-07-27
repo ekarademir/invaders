@@ -1,4 +1,10 @@
-const p5 = require("p5")
+const p5 = require('p5')
+
+const pixel = 10
+
+const boardWidth  = 200
+const boardHeight = 300
+
 
 let sketch = function (p5) {
 
@@ -8,8 +14,9 @@ let sketch = function (p5) {
     }
 
     p5.draw = () => {
-        p5.background(255)
-        p5.ellipse(50, 50, 80, 80)
+        p5.background(0)
+        
+        p5.rectangle()
     }
 
 }
