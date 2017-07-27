@@ -4,7 +4,7 @@
   "description": "Space Invaders Clone in JS",
   "main": "main.js",
   "scripts": {
-    "start": "webpack index.js invaders.js && electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",

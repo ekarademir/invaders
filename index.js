@@ -1,14 +1,13 @@
 const p5 = require('p5')
 
-const {ipcRenderer} = require(electron)
+const {ipcRenderer} = require('electron')
 
 /**
  * @param _msg {string}
  */
 let convey = (_msg) => {
-    ipcRenderer.send('convey', _msg)
+    ipcRenderer.send('convey', `MSG: ${_msg}`)
 }
-
 
 const bw = 40
 const bh = 60
