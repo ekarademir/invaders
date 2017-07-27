@@ -1,40 +1,37 @@
+const {ipcRenderer} = require('electron')
 const p5 = require('p5')
 
-const {ipcRenderer} = require('electron')
+const {Board} = require('./invader')
+
+let board = new Board()
+
 
 /**
  * @param _msg {string}
  */
 let convey = (_msg) => {
-    ipcRenderer.send('convey', `MSG: ${_msg}`)
+  ipcRenderer.send('convey', `MSG: ${_msg}`)
 }
 
-const bw = 40
-const bh = 60
-
-let p = 10
 let canvas
 
 let sketch = function (p5) {
 
-    p5.setup = () => {
-        canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
+p5.setup = () => {
+  canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
+  
+  board.width = p5.windowWidth
+  board.height = p5.windowHeight
 
-        p = Math.min(p5.windowWidth/bw, p5.windowHeight/bh)
+  p5.smooth()
+}
 
-        convey(p)
+p5.draw = () => {
+  p5.background(0)
 
-        p5.smooth()
-    }
+  board.draw(p5)
 
-    p5.draw = () => {
-        p5.background(0)
-        
-        p5.stroke(255)
-        p5.strokeWeight(1)
-        p5.noFill()
-        p5.rect( 1*p, 1*p, (bw-2)*p, (bh-2)*p )
-    }
+}
 
 }
 
