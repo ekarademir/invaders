@@ -1,7 +1,7 @@
 const {ipcRenderer} = require('electron')
 const p5 = require('p5')
 
-const {Board} = require('./invader')
+const {Board} = require('./lib/invader')
 
 let board = new Board()
 
@@ -22,6 +22,9 @@ p5.setup = () => {
   
   board.width = p5.windowWidth
   board.height = p5.windowHeight
+  board.p5 = p5
+
+  board.set()
 
   p5.smooth()
 }
@@ -29,7 +32,7 @@ p5.setup = () => {
 p5.draw = () => {
   p5.background(0)
 
-  board.draw(p5)
+  board.draw()
 
 }
 
