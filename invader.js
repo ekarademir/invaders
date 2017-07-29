@@ -24,15 +24,13 @@ exports.Board = function Board(width, height){
   }
 }
 
-/**
- * Enemy ships
- * 
+/** 
  * @param {Board}     board - The board this enemy belogs to
  * @param {p5.Vector} pos   - Position vector of the centre
  * @param {width}  width
  * @param {height} height
  */
-exports.Enemy = function Enemy(pos, board) {
+exports.Ship = function Ship(pos, board) {
 
   this.board = board
   this.pos = pos
@@ -71,9 +69,5 @@ exports.Enemy = function Enemy(pos, board) {
     this.board = _b
 
   }
-
-}
-
-function Ship() {
 
 }
