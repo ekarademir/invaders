@@ -16,7 +16,9 @@ let board
 
 let sketch = function (p5) {
 
-p5.setup = () => {
+p5.setup = function() {
+
+  p5.colorMode(p5.HSB, 255)
 
   canvas = p5.createCanvas(400, 600)
 
@@ -36,7 +38,7 @@ p5.setup = () => {
 
 }
 
-p5.draw = () => {
+p5.draw = function() {
   p5.background(0)
 
   board.draw()
