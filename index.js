@@ -20,7 +20,16 @@ p5.setup = () => {
 
   canvas = p5.createCanvas(400, 600)
 
-  board = new Board(400, 600, p5)
+  board = new Board(
+    p5,
+    {
+
+      width : 400,
+      height: 600,
+      enemies: [5,4]
+
+    })
+
   board.set()
 
   p5.smooth()
