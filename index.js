@@ -3,8 +3,6 @@ const p5 = require('p5')
 
 const {Board} = require('./lib/invader')
 
-let board = new Board()
-
 
 /**
  * @param _msg {string}
@@ -14,19 +12,19 @@ let convey = (_msg) => {
 }
 
 let canvas
+let board
 
 let sketch = function (p5) {
 
 p5.setup = () => {
-  canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
-  
-  board.width = p5.windowWidth
-  board.height = p5.windowHeight
-  board.p5 = p5
 
+  canvas = p5.createCanvas(400, 600)
+
+  board = new Board(400, 600, p5)
   board.set()
 
   p5.smooth()
+
 }
 
 p5.draw = () => {
