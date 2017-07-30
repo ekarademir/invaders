@@ -26,7 +26,7 @@ p5.setup = () => {
 
       width : 400,
       height: 600,
-      enemies: [5,4]
+      enemies: [4,7]
 
     })
 
