@@ -1,2 +1,2 @@
 # invaders
-Space Invaders Clone in JS
+Space Invaders Clone in JS as an Electron Application
