@@ -3,7 +3,6 @@ const p5 = require('p5')
 
 const {Board} = require('./lib/invader')
 
-
 /**
  * @param _msg {string}
  */
