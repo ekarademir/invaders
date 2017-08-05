@@ -35,13 +35,15 @@ p5.setup = function() {
   board.set()
   
   window.addEventListener('keydown', (e) => {
-    // board.keypress(e.code)
-    console.log(e)
+
+    board.keydown(e.code)
+    
   } , true)
   
   window.addEventListener('keyup', (e) => {
-    // board.keypress(e.code)
-    console.log(e)
+
+    board.keyup(e.code)
+    
   } , true)
 
   p5.smooth()
