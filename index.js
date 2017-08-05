@@ -21,6 +21,7 @@ p5.setup = function() {
 
   canvas = p5.createCanvas(400, 600)
 
+
   board = new Board(
     p5,
     {
@@ -32,6 +33,9 @@ p5.setup = function() {
     })
 
   board.set()
+  window.addEventListener('keydown', (e) => {
+    board.keypress(e.code)
+  } , true)
 
   p5.smooth()
 
