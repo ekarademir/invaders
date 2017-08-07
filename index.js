@@ -30,9 +30,10 @@ p5.setup = function() {
 }
 
 p5.draw = function() {
+
   p5.background(0)
 
-  game.update()
+  game.draw()
 
 }
 
